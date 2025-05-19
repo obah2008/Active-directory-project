@@ -7,7 +7,8 @@ Shuffle will be used as the SOAR platform to detect and respond to suspicious ac
 ## Contents 
 - [Overview](#Overview)
 - [Lab setup](#Lab-setup)
-- ()
+- [Lab Architecture](#Architecture)
+- [SIEM integration](#SIEM-integration)
 
 
 # Architecture
