@@ -36,4 +36,7 @@ This will be used to simulate all the attacks that will be performed on the targ
 ![AD lab architecture](https://github.com/user-attachments/assets/31f8a90a-8fb1-4115-be75-7d7f0679e3e2)
 
 ## Lab Setup
+### Cloud VM Deployment
+All three of the Virtual machines that will be used will be hosted in the cloud. For this project, I'll be using microsoft Azure as the cloud provider. Azure was chosen because of it's seamless integration With Active directory.
+
 
