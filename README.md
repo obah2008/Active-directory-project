@@ -5,8 +5,8 @@ In this project, I'll be simulating a real world Active Directory enterprise env
 Shuffle will be used as the SOAR platform to detect and respond to suspicious activity using the SOC playbook. and finally slack will be used for communication
 
 ## Contents 
-- (Overview)[Overview]
-- [Lab setup](Lab setup)
+- [Overview](#Overview)
+- [Lab setup](#Lab-setup)
 - ()
 
 
