@@ -24,5 +24,13 @@ This will act as the host server for Splunk, the SIEM solution in charge of coll
 
 All three virtual machines will be hosted in the cloud and configured to work together, the two servers acting as Splunk forwarders and the Server as a centralized aggregator
 
+### Additional components
+1. Shuffle: Shuffle  will act as the SOAR platform and will handle automated incident response. It will recieve alert from splunk and execute playbooks based on a set of conditions.
+
+2. Slack: Slack will act as the communication tool and will provide real time alerts to the SOC analyst.
+
+Attacker machine:
+This will be used to simulate all the attacks that will be performed on the target.
+
 ![AD lab architecture](https://github.com/user-attachments/assets/31f8a90a-8fb1-4115-be75-7d7f0679e3e2)
 
