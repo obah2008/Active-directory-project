@@ -6,7 +6,7 @@ Shuffle will be used as the SOAR platform to detect and respond to suspicious ac
 
 ## Contents 
 - (Overview)[Overview]
-- (Lab setup)[Lab setup]
+- [Lab setup](Lab setup)
 - ()
 
 
@@ -33,4 +33,6 @@ Attacker machine:
 This will be used to simulate all the attacks that will be performed on the target.
 
 ![AD lab architecture](https://github.com/user-attachments/assets/31f8a90a-8fb1-4115-be75-7d7f0679e3e2)
+
+## Lab Setup
 
