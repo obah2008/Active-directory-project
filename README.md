@@ -58,7 +58,7 @@ Specs:
 - Operating System: Windows Server 2022
 
 #### 3. Splunk Server
-The Splunk Server will be run on Ubuntu 22.04 and I'll make use of a B2s instance. So the server has enough processing power, memory and storage for indexing logs.
+The Splunk Server will be run on Ubuntu 22.04 and I'll make use of a Ds1 instance. So the server has enough processing power, memory and storage for indexing logs.
 
 Specs:
 - CPU: 2vCPU
@@ -73,9 +73,26 @@ On the Azure dashboard, we'll hover over the VM dashboard and select create new 
 - Resource group: I'll create a new resource group and name it AD-lab
 - Virtual machine name: I'll name the virtual machine DCn1
 - Region: I'll be selecting the region closest to me, South Africa
-- Image: as state earlier, I'll be using a windows server 2022 as the operating system ISO
+- Image: as stated earlier, I'll be using a windows server 2022 as the operating system ISO
 - Size: For size, We'll be choosing a standard b2s instance
 - Inbound traffic: I'll allow inbound traffic from RDP 3389
 
 #### Deploying the Agent VM
-Folowing the same steps as used to deploy the domain controller VM, we'll create one for the Agent, but instead of using a B2s We'll use B1ms
+Folowing the same steps as used to deploy the domain controller VM, we'll create one for the Agent, but instead of using a B2s We'll use a B1ms instance instead
+- Resource group: We'll set the resource group as AD-lab
+- Virtual machine name: I'll name the virtual machine Agent
+- Region: Selected the region closest to me
+- Image: Windows server 2022 
+- Size: B1ms instance
+- Inbound traffic: inbound traffic from RDP 3389
+- Virtual 
+
+#### Deploying the Splunk Server
+For the splunk Server we'll be using Ubuntu 22.04 and a Ds1 instance
+- Resource group: AD-lab
+- Virtual machine name: Splunk server
+- Region: South Africa
+- Image: Ubuntu 22.04
+- Size: DS1
+- Inboud traffic: Allowed inboud traffic from SSH
+- Virtual Network: AD-Vnet
