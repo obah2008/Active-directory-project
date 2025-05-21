@@ -76,6 +76,7 @@ On the Azure dashboard, we'll hover over the VM dashboard and select create new 
 - Image: as stated earlier, I'll be using a windows server 2022 as the operating system ISO
 - Size: For size, We'll be choosing a standard b2s instance
 - Inbound traffic: I'll allow inbound traffic from RDP 3389
+- Virtual Network: AD-Vnet
 
 #### Deploying the Agent VM
 Folowing the same steps as used to deploy the domain controller VM, we'll create one for the Agent, but instead of using a B2s We'll use a B1ms instance instead
@@ -85,7 +86,7 @@ Folowing the same steps as used to deploy the domain controller VM, we'll create
 - Image: Windows server 2022 
 - Size: B1ms instance
 - Inbound traffic: inbound traffic from RDP 3389
-- Virtual 
+- Virtual Network: AD-Vnet
 
 #### Deploying the Splunk Server
 For the splunk Server we'll be using Ubuntu 22.04 and a Ds1 instance
