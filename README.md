@@ -40,7 +40,7 @@ This will be used to simulate all the attacks that will be performed on the targ
 All three of the Virtual machines that will be used will be hosted in the cloud. For this project, I'll be using microsoft Azure as the cloud provider. Azure was chosen because of it's seamless integration With Active directory. SInce I'll be primarily making use of the $200 student credit Azure provides, I'll be setting this lab to be as cost effective as possible
 
 #### 1. Domain Controller(DCn1)
-As earlier mentioned we'll be using Windows server 2019 as the operating system for Domain controller. for the domain controller I'll be using a B2s instance
+As earlier mentioned we'll be using Windows server 2022 as the operating system for Domain controller. for the domain controller I'll be using a B2s instance
 
 Specs:
 - CPU: 2vCPU
@@ -68,3 +68,14 @@ Specs:
 
 ### Installing the Virtual Machines
 
+#### Deploying the Domain controller VM
+On the Azure dashboard, we'll hover over the VM dashboard and select create new Azure machine,  
+- Resource group: I'll create a new resource group and name it AD-lab
+- Virtual machine name: I'll name the virtual machine DCn1
+- Region: I'll be selecting the region closest to me, South Africa
+- Image: as state earlier, I'll be using a windows server 2022 as the operating system ISO
+- Size: For size, We'll be choosing a standard b2s instance
+- Inbound traffic: I'll allow inbound traffic from RDP 3389
+
+#### Deploying the Agent VM
+Folowing the same steps as used to deploy the domain controller VM, we'll create one for the Agent, but instead of using a B2s We'll use B1ms
