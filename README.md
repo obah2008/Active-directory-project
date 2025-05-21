@@ -48,7 +48,7 @@ Specs:
 - Storage: 128GB
 - Operating system: Windows Server 2022
 
-2. Agent
+2.Agent
 The agent will also be run on windows Server 2022. We'll be using the B1ms as it the machines workload will be minimal
 
 Specs:
@@ -57,7 +57,7 @@ Specs:
 - Storage: 64GB
 - Operating System: Windows Server 2022
 
-3. Splunk Server
+3.Splunk Server
 The Splunk Server will be run on Ubuntu 22.04 and I'll make use of a B2s instance. So the server has enough processing power, memory and storage for indexing logs.
 
 Specs:
