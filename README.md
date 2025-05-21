@@ -37,6 +37,33 @@ This will be used to simulate all the attacks that will be performed on the targ
 
 ## Lab Setup
 ### Cloud VM Deployment
-All three of the Virtual machines that will be used will be hosted in the cloud. For this project, I'll be using microsoft Azure as the cloud provider. Azure was chosen because of it's seamless integration With Active directory.
+All three of the Virtual machines that will be used will be hosted in the cloud. For this project, I'll be using microsoft Azure as the cloud provider. Azure was chosen because of it's seamless integration With Active directory. SInce I'll be primarily making use of the $200 student credit Azure provides, I'll be setting this lab to be as cost effective as possible
+
+1.Domain Controller(DCn1)
+As earlier mentioned we'll be using Windows server 2019 as the operating system for Domain controller. for the domain controller I'll be using a B2s instance
+
+Specs:
+- CPU: 2vCPU
+- Ram: 4GB ram
+- Storage: 128GB
+- Operating system: Windows Server 2022
+
+2. Agent
+The agent will also be run on windows Server 2022. We'll be using the B1ms as it the machines workload will be minimal
+
+Specs:
+- CPU: 1vCPU
+- Ram: 2GB ram
+- Storage: 64GB
+- Operating System: Windows Server 2022
+
+3. Splunk Server
+The Splunk Server will be run on Ubuntu 22.04 and I'll make use of a B2s instance. So the server has enough processing power, memory and storage for indexing logs.
+
+Specs:
+- CPU: 2vCPU
+- Ram: 4GB ram
+- Storage: 128GB
+- Operating System: Ubuntu 22.04
 
 
