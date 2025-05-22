@@ -102,3 +102,7 @@ Since all of the virtual machines are assigned to the same virtual network they 
 The next step is to take note of the private address of each VM
 
 With all the VMs up and running we can now RDP into our Domain controller and Agent, and send pings to test connectivity
+
+
+### Installing Active Directory
+On the server manager on DCn1, we can set up active directory and promote the Server to a Domain controller
