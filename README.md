@@ -37,7 +37,7 @@ This will be used to simulate all the attacks that will be performed on the targ
 
 ## Lab Setup
 ### Cloud VM Deployment
-All three of the Virtual machines that will be used will be hosted in the cloud. For this project, I'll be using microsoft Azure as the cloud provider. Azure was chosen because of it's seamless integration With Active directory. SInce I'll be primarily making use of the $200 student credit Azure provides, I'll be setting this lab to be as cost effective as possible
+All three virtual machines used in this project will be hosted in the cloud. For this project, I'll be using Microsoft Azure as the cloud provider. Azure was chosen because of its seamless integration with Active Directory. Since I’ll primarily be using the $200 student credit Azure provides, this lab is designed to be as cost-effective as possible.
 
 #### 1. Domain Controller(DCn1)
 As earlier mentioned we'll be using Windows server 2022 as the operating system for Domain controller. for the domain controller I'll be using a B2s instance
@@ -49,7 +49,7 @@ Specs:
 - Operating system: Windows Server 2022
 
 #### 2. Agent
-The agent will also be run on windows Server 2022. We'll be using the B1ms as it the machines workload will be minimal
+The agent VM will also run Windows Server 2022. However, we’ll use a B1ms instance since the workload on this machine will be minimal.
 
 Specs:
 - CPU: 1vCPU
@@ -58,11 +58,11 @@ Specs:
 - Operating System: Windows Server 2022
 
 #### 3. Splunk Server
-The Splunk Server will be run on Ubuntu 22.04 and I'll make use of a Ds1 instance. So the server has enough processing power, memory and storage for indexing logs.
+The Splunk server will run Ubuntu 22.04, and we’ll use a DS1_v2 instance. This provides sufficient processing power, memory, and storage for log indexing and analysis.
 
 Specs:
-- CPU: 2vCPU
-- Ram: 4GB ram
+- CPU: 1vCPU
+- Ram: 3.5GB ram
 - Storage: 128GB
 - Operating System: Ubuntu 22.04
 
@@ -71,11 +71,11 @@ Specs:
 #### Deploying the Domain controller VM
 On the Azure dashboard, we'll hover over the VM dashboard and select create new Azure machine,  
 - Resource group: I'll create a new resource group and name it AD-lab
-- Virtual machine name: I'll name the virtual machine DCn1
+- Virtual machine name:  DCn1
 - Region: I'll be selecting the region closest to me, South Africa
-- Image: as stated earlier, I'll be using a windows server 2022 as the operating system ISO
-- Size: For size, We'll be choosing a standard b2s instance
-- Inbound traffic: I'll allow inbound traffic from RDP 3389
+- Image: I'll be using a windows server 2022 ISO
+- Size: B2s instance
+- Inbound traffic: I'll allow inbound traffic from RDP(port 3389
 - Virtual Network: AD-Vnet
 
 #### Deploying the Agent VM
@@ -91,9 +91,14 @@ Folowing the same steps as used to deploy the domain controller VM, we'll create
 #### Deploying the Splunk Server
 For the splunk Server we'll be using Ubuntu 22.04 and a Ds1 instance
 - Resource group: AD-lab
-- Virtual machine name: Splunk server
+- Virtual machine name: Splunk-server
 - Region: South Africa
 - Image: Ubuntu 22.04
-- Size: DS1
-- Inboud traffic: Allowed inboud traffic from SSH
+- Size: DS1v2
+- Inboud traffic: Allow inboud traffic from SSH(port 22)
 - Virtual Network: AD-Vnet
+
+Since all of the virtual machines are assigned to the same virtual network they can communicate with each other.
+The next step is to take note of the private address of each VM
+
+With all the VMs up and running we can now RDP into our Domain controller and Agent, and send pings to test connectivity
