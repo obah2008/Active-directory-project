@@ -119,3 +119,4 @@ Back on the Server dashboard
 - Name the Root domain
 - Add a DSRM password
 - Accept default configuration until install is complete
+- After the installation is complete, the server reboots to apply changes
