@@ -111,3 +111,11 @@ On the DCn1 Server, we can set up active directory and promote the Server to a D
 - Accept default configurations unto we get to Server roles, where "Active directory domain services" will be selected, and then I'll add features
 - Default configurations will be followed until we finish the installation. 
 
+### Promoting the Server to a domain controller
+Back on the Server dashboard
+- Navigate to the top right corner and click on the flag icon 
+- On the post deployment configuration section. click on "promote this server to a domain controller"
+- Select add a new forest
+- Name the Root domain
+- Add a DSRM password
+- Accept default configuration until install is complete
