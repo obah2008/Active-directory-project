@@ -105,4 +105,9 @@ With all the VMs up and running we can now RDP into our Domain controller and Ag
 
 
 ### Installing Active Directory
-On the server manager on DCn1, we can set up active directory and promote the Server to a Domain controller
+On the DCn1 Server, we can set up active directory and promote the Server to a Domain controller by 
+- Opening server manager
+- On the quick start menu, select Add roles and features
+- Accept default configurations unto we get to Server roles, where "Active directory domain services" will be selected, and then I'll add features
+- Default configurations will be followed until we finish the installation. 
+
