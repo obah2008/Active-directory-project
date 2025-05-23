@@ -120,3 +120,8 @@ Back on the Server dashboard
 - Add a DSRM password
 - Accept default configuration until install is complete
 - After the installation is complete, the server reboots to apply changes
+
+### Creatting new AD users
+With the server now fully installed:
+We can head over to "AD users and computers" to begin creating new users
+On the "AD users and computers" window, we can create a new user by right clicking and selecing new and then User. give the user a name and assign a password.
