@@ -126,4 +126,7 @@ With the server now fully installed:
 We can head over to "AD users and computers" to begin creating new users
 On the "AD users and computers" window, we can create a new user by right clicking and selecing new and then User. give the user a name and assign a password.
 
-#### Joining the 
+#### Joining the Agent to the Active directory domain
+- Navigate to Computer name/domain changes
+- Select member of domain and input the name of the root domain we used when setting up AD on the domain controller 
+
