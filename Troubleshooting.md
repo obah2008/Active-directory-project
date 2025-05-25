@@ -15,11 +15,11 @@ Request to Unknown timed-out
 
 - Configuring static routes on the agent:  
     We can manually configure the agents IPV4 static routes.  
-      1 IP Address: x.x.x.x  
-      2 Subnet mask: 255.255.255.0  
-      3 Default gatewatay: 10.0.0.1(Azure's default gafetway)  
-      4 Preferred DNS Server: Domain controller's IP  
-
+      1. IP Address: x.x.x.x  
+      2. Subnet mask: 255.255.255.0  
+      3. Default gatewatay: 10.0.0.1(Azure's default gafetway)  
+      4. Preferred DNS Server: Domain controller's IP  
+ 1. Set a static IP address on the Domain Controller(It should be the same as that of the IP address of the "preferred DNS server" on the agent)
 - Restest DNS resolution on the Agent:  
 `nslookup <domain name>`  
       We still encounter the non existent domain error. 
@@ -27,6 +27,26 @@ Request to Unknown timed-out
 
 - Configure the static routes on teh Domain controller:  
   1. Set a static IP address on the Domain Controller(It should be the same as that of the IP address of the "preferred DNS server" on the agent)  
-  2. Configure the Domain
+  2. Set the Domain controller's preferred DNS server to it's own private IP
+  
+- Restart DNS services on the Domain controller:
+  To apply the changes:
+``` Powershell
+ipconfig /flushdns
+ipconfig /registerdns
+net stop dns
+net start dns 
+```
+- Retry DNS lookup from the Domain controller:
+run `nslookup obah.AD-lab`  
+The expected output should be   
+```
+Server: <Ad domain name>
+Address: x.x.x.x
+Name: <AD domain name>
+Address: x.x.x.x
+```
+- We can now try joining the AD domain on the Agent
+ 
 
   
