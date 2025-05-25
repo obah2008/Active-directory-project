@@ -46,7 +46,10 @@ Address: x.x.x.x
 Name: <AD domain name>
 Address: x.x.x.x
 ```
-- We can now try joining the the Agent to the AD domain. 
+- We can now try joining the the Agent to the AD domain once more.
+
+![Screenshot 2025-05-25 115827](https://github.com/user-attachments/assets/685488e4-86c4-4c1f-a656-4c2c12a89a4c)
+
  
 
   
