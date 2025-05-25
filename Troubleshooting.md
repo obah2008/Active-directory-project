@@ -46,7 +46,7 @@ Address: x.x.x.x
 Name: <AD domain name>
 Address: x.x.x.x
 ```
-- We can now try joining the AD domain on the Agent
+- We can now try joining the the Agent to the AD domain. 
  
 
   
