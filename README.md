@@ -131,4 +131,5 @@ On the "AD users and computers" window, we can create a new user by right clicki
 - Select member of domain and input the name of the root domain we used when setting up AD on the domain controller
  
  If you have an issue like the domain name could not be found or located, click [here]() to see how to resolve that issue
- 
+
+- once successful, restart the agent to save changes 
