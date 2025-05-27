@@ -124,12 +124,12 @@ Back on the Server dashboard
 ### Creatting new AD users
 With the server now fully installed:
 We can head over to "AD users and computers" to begin creating new users
-On the "AD users and computers" window, we can create a new user by right clicking and selecing new and then User. give the user a name and assign a password.
+On the "AD users and computers" window, we can create a new user by right clicking and selecing new and then User. Give the user a name and assign a password.
 
 #### Joining the Agent to the Active directory domain
 - Navigate to Computer name/domain changes
 - Select member of domain and input the name of the root domain we used when setting up AD on the domain controller
  
- If you have an issue like the domain name could not be found or located, click [here]() to see how to resolve that issue
+ If you have an issue like the domain name could not be found or located, click [here](https://github.com/obah2008/Active-directory-project/blob/main/Troubleshooting.md) to see how to resolve that issue
 
 - once successful, restart the agent to save changes
