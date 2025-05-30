@@ -4,7 +4,7 @@ The client failed to resolve the Active directory domain name while attempting t
 To see if the client can resolve the AD's domain name, we can run:
 `nslookup <domain name>` 
 output
-```bash
+```powershell
 Server: Unknown
 Address:XXX.XXX.XXX.XXX
 Request to Unknown timed-out
