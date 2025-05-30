@@ -6,4 +6,4 @@ To install splunk on the Ubuntu Server:
 - SSH into the server and make sure all the system packages are updated using  
    ```bash 
   sudo apt update && sudo apt upgrade
-```bash
+```
