@@ -24,3 +24,6 @@ cd /opt/splunk/bin
 ```bash
 ./splunk start
 ```
+- After the installation is complete, set a username and password
+- Access the Splunk dashboard with a browser using the servers IP address and the port the Splunk service listens on
+- 
