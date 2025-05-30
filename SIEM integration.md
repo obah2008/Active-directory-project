@@ -16,10 +16,11 @@ sudo wget -O splunk-9.4.2-e9664af3d956-linux-amd64.deb "https://download.splunk.
 ```bash
 sudo dpkg -i splunk-9.4.2-e9664af3d956-linux-amd64.deb
 ```
-- once installed cd to to directory splunk was installed on and start the service
+- once installed cd to to directory splunk was installed on 
 ```bash
 cd /opt/splunk/bin
 ```
+- Start the service
 ```bash
 ./splunk start
 ```
