@@ -52,6 +52,7 @@ Address: x.x.x.x
 
 ## Issue 2:
 Splunk failed to start on the Ubuntu server after installation with the following outputs:  
+
 Warning: cannot create "/opt/splunk/var/log/splunk"  
 Warning: cannot create "/opt/splunk/var/log/introspection"  
 Warning: cannot create "/opt/splunk/var/log/watchdog"  
@@ -62,7 +63,7 @@ Warning: cannot create "/opt/splunk/etc/licenses/download-trial"
 Use sudo to run the command with administrative priviledges  
 
 ## Issue 3:
-The splunk server address is not responding with a server timed out response.
+The Splunk server address is not responding, and the browser returns a server timed out error.
 
 ### Solution
 Solution
