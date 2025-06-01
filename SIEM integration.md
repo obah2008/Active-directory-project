@@ -29,4 +29,5 @@ cd /opt/splunk/bin
 
 ### Configuring Splunk
 I'll be configuring Splunk to enable it receive and index logs from the endpoints seamlessly
-- I'll be installing the Splunk add-on for windows to helps parse and normalize Windows log data.
+- Step 1: I'll be installing the Splunk add-on for windows to helps parse and normalize Windows log data.
+- 
