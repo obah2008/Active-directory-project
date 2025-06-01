@@ -39,4 +39,10 @@ I'll be configuring Splunk to enable it receive and index logs from the endpoint
   3. During the setup, select "Use the universal forwarder with an on-prem Splunk Enterprise instance."
   4. Create a username for the Universal Forwarder.
   5. Set the receiving indexer IP address to the IP of your Splunk server, and use port 9997 as the receiving port.
-
+  6. Copy the inputs.conf file from `C:\Program Files\SplunkUniversalForwarder\etc\system\default` to `C:\Program Files\SplunkUniversalForwarder\etc\system\local`
+  7. Open the inputs.conf file in Notepad, and add the following lines at the end of the file:
+   ```conf
+   [WinEventLog://Security]
+   index = <name-of-index>
+   disabled = false
+   ```
