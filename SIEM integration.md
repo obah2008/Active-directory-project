@@ -31,3 +31,6 @@ cd /opt/splunk/bin
 I'll be configuring Splunk to enable it receive and index logs from the endpoints seamlessly
 - Step 1: I'll be installing the Splunk add-on for windows to helps parse and normalize Windows log data.
 - Step 2: Create a new index to store all the logs from the endpoints
+- Step 3: Configure the port Splunk will be receiving the logs on (Port 9997) and add a new Azure NSG inbound rule to allow traffic on port 9997 to the Splunk VM.
+
+
