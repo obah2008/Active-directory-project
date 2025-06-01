@@ -33,4 +33,4 @@ I'll be configuring Splunk to enable it receive and index logs from the endpoint
 - Step 2: Create a new index to store all the logs from the endpoints
 - Step 3: Configure the port Splunk will be receiving the logs on (Port 9997) and add a new Azure NSG inbound rule to allow traffic on port 9997 to the Splunk VM.
 
-
+### Installing the universal forwarders on the Agent and Domain controller
