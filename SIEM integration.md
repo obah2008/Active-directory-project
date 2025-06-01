@@ -33,9 +33,10 @@ I'll be configuring Splunk to enable it receive and index logs from the endpoint
 - Step 1: I'll be installing the Splunk add-on for windows to helps parse and normalize Windows log data.
 - Step 2: Create a new index to store all the logs from the endpoints
 - Step 3: Configure the port Splunk will be receiving the logs on (Port 9997) and add a new Azure NSG inbound rule to allow traffic on port 9997 to the Splunk VM.
-- #### Step 4: Download and Install the universal forwarder on the Agent and Domain controller.
-    1. Download the Universal forwarder from Splunk's official website 
-    2. Run the installer
-    3. Select use the universal forwarder with an on-prem Splunk Enterprise instance
-    4. Create a username
-    5. The receiving indexer IP should be set to the spunk servers IP address with a receiving port of 9997
+- Step 4: Download and Install the Universal Forwarder on the Agent and Domain Controller  
+  1. Download the Splunk Universal Forwarder from the official Splunk website.
+  2. Run the installer.
+  3. During the setup, select "Use the universal forwarder with an on-prem Splunk Enterprise instance."
+  4. Create a username for the Universal Forwarder.
+  5. Set the receiving indexer IP address to the IP of your Splunk server, and use port 9997 as the receiving port.
+
