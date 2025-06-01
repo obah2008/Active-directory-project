@@ -28,4 +28,5 @@ cd /opt/splunk/bin
 - Access the Splunk dashboard with a browser using the servers IP address and the port the Splunk service listens on.
 
 ### Configuring Splunk
-
+I'll be configuring Splunk to enable it receive and index logs from the endpoints seamlessly
+- I'll be installing the Splunk add-on for windows to helps parse and normalize Windows log data.
