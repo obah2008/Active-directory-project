@@ -46,3 +46,4 @@ I'll be configuring Splunk to enable it receive and index logs from the endpoint
    index = <name-of-index>
    disabled = false
    ```
+### Creating Splunk Alerts
