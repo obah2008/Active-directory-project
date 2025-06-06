@@ -46,4 +46,5 @@ I'll be configuring Splunk to enable it receive and index logs from the endpoint
    index = <name-of-index>
    disabled = false
    ```
-### Creating Splunk Alerts
+### Creating Splunk Alerts & Rules
+Now that Splunk is receiving telemetry from both endpooints, it's time to create rules to monitor for suspicious behaviour
