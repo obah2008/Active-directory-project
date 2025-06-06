@@ -47,4 +47,11 @@ I'll be configuring Splunk to enable it receive and index logs from the endpoint
    disabled = false
    ```
 ### Creating Splunk Alerts & Rules
-Now that Splunk is receiving telemetry from both endpooints, it's time to create rules to monitor for suspicious behaviour
+Now that Splunk is receiving telemetry from both endpooints, it's time to create rules to monitor for suspicious behaviour and alerts that will trigger when these rules are true:
+For this I'll be configuring an Alert for multiple unsuccessful RDP login attempts on our agent
+- Go to the **search & reporting** app 
+- In the search bar, I'll be filtering for failed RDP logins with the event ID of 4625 and logon type of 10:
+```SPL
+index=*Your index name* EventCode=4625 Logon_Type=10 NOT (IpAddress=x.x.x.*
+```
+- The above command filters for failed RDP logon attempts outside our trusted ip address range
