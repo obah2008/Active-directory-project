@@ -55,3 +55,4 @@ For this I'll be configuring an Alert for multiple unsuccessful RDP login attemp
 index=*Your index name* EventCode=4625 Logon_Type=10 NOT (IpAddress=x.x.x.*
 ```
 - The above command filters for failed RDP logon attempts outside our trusted ip address range
+- 
