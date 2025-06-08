@@ -46,13 +46,27 @@ I'll be configuring Splunk to enable it receive and index logs from the endpoint
    index = <name-of-index>
    disabled = false
    ```
-### Creating Splunk Alerts & Rules
-Now that Splunk is receiving telemetry from both endpooints, it's time to create rules to monitor for suspicious behaviour and alerts that will trigger when these rules are true:
-For this I'll be configuring an Alert for multiple unsuccessful RDP login attempts on our agent
-- Go to the **search & reporting** app 
-- In the search bar, I'll be filtering for failed RDP logins with the event ID of 4625 and logon type of 10:
-```SPL
-index=*Your index name* EventCode=4625 Logon_Type=10 NOT (IpAddress=x.x.x.*
+# Creating Splunk Alerts & Rules
+
+Now that Splunk is getting telemetry from both the domain controller and the agent, it's time to set up rules to watch for suspicious activity, and alerts that will trigger when something happens.
+
+---
+
+## Alert for Multiple Failed RDP Login Attempts
+
+We want to create an alert for multiple unsuccessful RDP login attempts on our agent.
+
+- Open the **Search & Reporting** app in Splunk.
+- Use this SPL search to find failed RDP logins (Event ID 4625, Logon Type 10) that come from outside our trusted IP ranges:
+
+```spl
+index=ad-lab EventCode=4625
+| where NOT like(Source_Network_Address, "10.%") AND NOT like(Source_Network_Address, "192.168.%") AND NOT like(Source_Network_Address, "172.1%") AND NOT like(Source_Network_Address, "172.2%") AND NOT like(Source_Network_Address, "172.3%")
+| stats count by Source_Network_Address, Account_Name, host
 ```
-- The above command filters for failed RDP logon attempts outside our trusted ip address range
-- 
+- This query filters for failed RDP logins from IPs outside our private network ranges, then counts how many attempts came from each IP and which accounts and hosts were targeted.
+
+- click Save As > Alert.
+- **Title:** Failed External RDP Logins  
+- **Type/Schedule:** Scheduled (Cron: `0 * * * *`, runs hourly) | **Trigger Actions:** Add to triggered alerts, Severity: High
+- **Expiration:** 7 days from creation  
