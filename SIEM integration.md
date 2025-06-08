@@ -76,4 +76,7 @@ For this demonstration, I turned off the network firewall — and just as expect
 
 I’ll be dedicating a separate section of this project to enriching this IP and gathering as much information as possible about the source of the activity.
 
+![Screenshot 2025-06-08 185454](https://github.com/user-attachments/assets/4e39a5f0-495f-4239-adc8-a1d1f95abbff)
+
+
 ## Next Up: [Slack and Shuffle integration]
