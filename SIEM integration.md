@@ -70,3 +70,6 @@ index=ad-lab EventCode=4625
 - **Title:** Failed External RDP Logins  
 - **Type/Schedule:** Scheduled (Cron: `0 * * * *`, runs hourly) | **Trigger Actions:** Add to triggered alerts, Severity: High
 - **Expiration:** 7 days from creation  
+
+### What I found
+For this demonstration, I turned off the network firewall, as expected there was a huge spike in failed RDP login attempts. One notable IP address consistently showed up **45.134.26.142**
