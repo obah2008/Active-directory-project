@@ -71,5 +71,9 @@ index=ad-lab EventCode=4625
 - **Type/Schedule:** Scheduled (Cron: `0 * * * *`, runs hourly) | **Trigger Actions:** Add to triggered alerts, Severity: High
 - **Expiration:** 7 days from creation  
 
-### What I found
-For this demonstration, I turned off the network firewall, as expected there was a huge spike in failed RDP login attempts. One notable IP address consistently showed up **45.134.26.142**
+## What I Found
+For this demonstration, I turned off the network firewall — and just as expected, there was a huge spike in failed RDP login attempts. One particular IP address stood out: 45.134.26.142. This address showed up consistently in the logs and appears to be an external threat actor attempting to brute-force RDP login.
+
+I’ll be dedicating a separate section of this project to enriching this IP and gathering as much information as possible about the source of the activity.
+
+## Next Up: [Slack and Shuffle integration]
