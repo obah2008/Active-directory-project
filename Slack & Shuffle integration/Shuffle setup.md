@@ -16,5 +16,8 @@ Shuffle is a SOAR tool that allows users to automate processes and create workfl
 - Copy the webhook URI(uniform resource Identifier)
 - head over to the Splunk dashboard, Navigate to the alert we created in the [SIEM integration](https://github.com/obah2008/Active-directory-project/blob/main/SIEM%20integration.md) section. Edit the Alert and add the copied URI to webhook section
 - Headback to the shuffle dashboard and start the webhook.
-- Create A [slack] account
+- Create A [slack](https://slack.com/) account
+- Create a new Slack workspace
 - Drag the slack application unto the workflow, and name it Alert-notification
+- Authenticate slack with the workspace we created 
+- Create a new channel on slack called alerts
