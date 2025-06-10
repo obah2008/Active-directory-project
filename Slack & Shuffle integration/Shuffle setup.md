@@ -28,7 +28,7 @@ Alert: $exec.search_name \nIP address: $exec.result.Source_Network_Address \nUse
 - On the **Slack** dashboard head over to the channel we created a few steps ago, and copy the channel ID from the URL
 - Back on the **Shuffle** dashboard paste the channel ID on on the channel section on the Shuffle-slack app
 - On slack we can now see the alerts from splunk
-- Now we can create an email that's sent to the 
+- Now we can create an email that's sent to the SOC analyst. using the User input trigger we can create a message that is sent to the SOC analyst to trigger the rest of the playbook
 ![image](https://github.com/user-attachments/assets/5feec893-93ae-4182-a7a0-5dd5ae23f2fa)
 
 ### Creating a playbook
