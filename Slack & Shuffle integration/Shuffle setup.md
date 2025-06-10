@@ -14,5 +14,7 @@ Shuffle is a SOAR tool that allows users to automate processes and create workfl
 - With my shuffle account setup, I can make a new workflow which I'll be calling Obah-AD
 - On the new workflow dashboard we can now create a new webhook(A way for one application to send data to another when a specific event occurs)
 - Copy the webhook URI(uniform resource Identifier)
-- head over to the Splunk dashboard, Navigate to the alert we created in the [SIEM integration]() section. Edit the Alert and add the copied URI to webhook section
+- head over to the Splunk dashboard, Navigate to the alert we created in the [SIEM integration](https://github.com/obah2008/Active-directory-project/blob/main/SIEM%20integration.md) section. Edit the Alert and add the copied URI to webhook section
 - Headback to the shuffle dashboard and start the webhook.
+- Create A [slack] account
+- Drag the slack application unto the workflow, and name it Alert-notification
