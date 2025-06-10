@@ -21,3 +21,21 @@ Shuffle is a SOAR tool that allows users to automate processes and create workfl
 - Drag the slack application unto the workflow, and name it Alert-notification
 - Authenticate slack with the workspace we created 
 - Create a new channel on slack called alerts
+- Edit the test field under slack on the Shuffle dashboard
+```bash
+Alert: $exec.search_name \nIP address: $exec.result.Source_Network_Address \nUser: $exec.result.Account_Name \nhost: $exec.result.host
+```
+- On the **Slack** dashboard head over to the channel we created a few steps ago, and copy the channel ID from the URL
+- Back on the **Shuffle** dashboard paste the channel ID on on the channel section on the Shuffle-slack app
+- On slack we can now see the alerts from splunk
+- Now we can create an email that's sent to the 
+![image](https://github.com/user-attachments/assets/5feec893-93ae-4182-a7a0-5dd5ae23f2fa)
+
+### Creating a playbook
+A playbook are step by step in that tell a security team what to do in case of an incident. Our playbook in this case will be a set of actions that would be triggered when a condition is true  
+Playbook details: The playbook goes like this
+
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Row 1    | Data     | More     |
+| Row 2    | Data     | More     |
