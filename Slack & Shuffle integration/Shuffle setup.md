@@ -34,8 +34,10 @@ Alert: $exec.search_name \nIP address: $exec.result.Source_Network_Address \nUse
 ### Creating a playbook
 A playbook are step by step in that tell a security team what to do in case of an incident. Our playbook in this case will be a set of actions that would be triggered when a condition is true  
 Playbook details: The playbook goes like this
-
-| Column 1 | Column 2 | Column 3 |
-|----------|----------|----------|
-| Row 1    | Data     | More     |
-| Row 2    | Data     | More     |
+| Step | Description |
+|------|-------------|
+| 1    | Splunk detects multiple failed RDP login attempts and triggers an alert |
+| 2    | Shuffle receives the alert and starts the playbook |
+| 3    | A Slack message is sent to the SOC analyst with alert details and a button to block the IP |
+| 4    | If the analyst clicks "Block IP", the playbook proceeds to block the attacker's IP using Windows Firewall |
+| 5    | A confirmation message is sent back to Slack, informing the analyst of the result |
