@@ -42,9 +42,12 @@ Playbook details: The playbook goes like this
 | 4    | If the analyst clicks "Block IP", the playbook proceeds to block the attacker's IP using Windows Firewall |
 | 5    | A confirmation message is sent back to Slack, informing the analyst of the result |
 
-- We've already created part of the playbook to collect the alerts from splunk and alert the soc analyst, The next step will be choosing a new trigger for user input. I'll name it "Actions" in the information field of the user_input trigger we can create the message that will be sent to the SOC analyst
+- We've already created part of the playbook to collect the alerts from splunk and alert the soc analyst, The next step will be choosing a new trigger for user input. I'll name it "Actions" in the information field of the user_input trigger. under the input option field chose email and enter the SOC email, we can create the message that will be sent to the SOC analyst by pasting what is below in the text field
 ```bash
 Do you want to block the source IP address? Start parameters: 
-$exec.result.Source_Network_Address
 ```
-- To create the playbook, I'll need to install windows
+- Now when ever the splunk alert is triggered we receive an email from slack asking if we want to block the source IP.
+
+![Screenshot 2025-06-11 010621](https://github.com/user-attachments/assets/a18ca240-9c70-4c23-baf2-498039a33fb6)
+
+-
