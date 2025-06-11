@@ -50,4 +50,9 @@ Do you want to block the source IP address? Start parameters:
 
 ![Screenshot 2025-06-11 010621](https://github.com/user-attachments/assets/a18ca240-9c70-4c23-baf2-498039a33fb6)
 
-- The next step is using Shuffle to trigger a **PfSense** rule to block an IP based on the response the SOC analyst gives Slack response.
+- The next step is using Shuffle to trigger a firewall rule to block an IP based on the response the SOC analyst gives Slack response.
+
+
+
+## Note:
+I original planned on using a PFsense rule, 
