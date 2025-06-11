@@ -57,6 +57,8 @@ Do you want to block the source IP address? Start parameters:
 ## Setting up Azure firewall and integrating it to slack
 - Create a new firewall policy
 - Select the same resource group and region the virtual machines were installed in
+- Create a new IP group.
+- Create a Rule collection in the firewall policy we created
 
 ## Note:
 I original planned on using a PFsense rule, 
