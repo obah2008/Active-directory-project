@@ -52,7 +52,11 @@ Do you want to block the source IP address? Start parameters:
 
 - The next step is using Shuffle to trigger a firewall rule to block an IP based on the response the SOC analyst gives Slack response.
 
+- To do this I'll be using Azure firewall
 
+## Setting up Azure firewall and integrating it to slack
+- Create a new firewall policy
+- Select the same resource group and region the virtual machines were installed in
 
 ## Note:
 I original planned on using a PFsense rule, 
